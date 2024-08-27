@@ -1,10 +1,12 @@
 const express = require('express');
 const Stripe = require('stripe');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 
 
 // Initialisation de l'application Express
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 // Initialisation de Stripe avec la clé secrète
